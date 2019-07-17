@@ -4,17 +4,676 @@
 
 /*==========  Desktop First  ==========*/
 
+// ≥1400px
+@media screen and (max-width: 1400px)
+    
+  // Header
+
+  .bottom_header
+    padding: 15px 0 0
+
+  // main page
+
+  .slider_wr 
+    
+    .overlay
+      width: 500px
+      height: 500px
+
+  .bag_slider
+    padding-top: 10px
+    max-width: 372px
+    margin-top: 20px
+
+  .s_main_screen 
+    top: -211px
+    padding-top: 226px
+
+  .slider_nav
+    right: 36px
+    top: 46%
+
+    .next_bag 
+      width: 160px
+      height: 160px
+      padding: 15px
+      
+      img
+        max-width: 90px
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+      &:hover
+
+        img
+          transform: translate(-50%, -50%) scale(1.1)
+
+    .bottom_slider_nav
+
+      .counter
+        left: -10px
+
+      .bag_nav
+        right: -10px
+
+  .partners_wr
+    padding: 40px 0
+
+  .main_footer
+
+    .addr
+      white-space: nowrap
+
+      span
+        margin-left: 5px
+
+    .foot_col_1
+
+      .copy
+        white-space: nowrap
+
+    .foot_nav 
+      
+      a
+        white-space: nowrap
+
+  .form_sender 
+    
+    input
+      max-width: 400px
+      padding: 15px 30px
+      
+        
+
+
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  // main page
+
+  .logo 
+    
+    img
+      max-width: 113px
+      margin: 0 0 0 60px
+
+  .phone_wr
+    font-size: 12px
+
+    .phone
+      padding: 7px 0
+
+    a:nth-child(2)
+      margin-top: 10px
+
+  .main_title 
+    
+    h1
+      font-size: 24px
+
+  .button_up
+    margin: 0
+
+  .s_main_screen
+    top: -144px
+    min-height: 800px
+    height: 100%
+
+  .bag_slider
+    margin-top: 30px
+    max-width: 300px
+
+  .slider_wr 
+
+    .overlay
+      width: 584px
+      height: 584px
+      left: 29px
+      bottom: 0
+      right: 0
+      top: -69px
+
+  .slider_nav 
+    right: 84px
+    top: 34%
+
+    .bottom_slider_nav 
+    
+      .current
+        font-size: 36px
+
+        &::after 
+          content: ''
+          width: 110px
+          left: 54px
+          top: 27px
+      
+      .counter
+        left: -33px
+
+      .bag_nav
+        right: -33px
+    
+    .next_bag 
+      width: 130px
+      height: 130px
+      
+      img
+        max-width: 60px
+
+  .partners_wr
+    margin-top: -138px
+    padding: 25px 0
+
+  .preview_title 
+    
+    h2
+      font-size: 24px
+
+  .product_item 
+    
+    .product_img
+      max-width: 180px
+
+  .product_item .product_nav .cart, .product_item .product_nav .wishlist
+    width: 30px
+    height: 30px
+    font-size: 16px
+
+    svg
+      width: 16px
+
+  .prewiews_wr
+    padding: 60px 0 30px
+
+  .advantages_cnt
+    padding: 45px 0
+
+  .s_sender
+    padding: 60px 0
+
+  .sender_title
+    font-size: 20px
+
+  .sender_descr p
+    font-size: 12px
+    margin-bottom: 10px
+
+    svg
+      position: relative
+      top: 5px
+      left: 5px
+      
+
+  .form_sender 
+    
+    input
+      max-width: 65%
+
+    button
+      max-width: 150px
+    
+  .main_footer 
+    padding: 45px 0
+
+    .phone_wr 
+      
+      .phone
+        font-size: 14px
+    
+    .foot_col_1 
+      
+      .copy
+        white-space: initial
+
+  .logo_footer
+    margin: auto
+
+    img
+      margin: auto
+
+  .wsf
+    margin-top: 10px
+
+  .foot_nav 
+    
+    li:not(:last-child)
+      margin-bottom: 15px
+
+  .foot_col_4 
+    
+    .soc_media
+      font-size: 20px
+      margin-bottom: 10px
+
+    span
+      margin-bottom: 15px
+
+
+  
 
 // ≥992px
 +media-breakpoint-down(md)
 
+  .logo 
+    margin: 0
+    
+    img
+      margin: 0
+      max-width: 100%
+
+  .phone_wr
+    max-width: 130px
+
+  .soc_media
+    margin-right: 0a
+
+  .s_main_screen
+    top: -176px
+
+  .bag_slider
+    margin-left: 15px
+    margin-top: 75px
+    max-width: 260px
+
+  .slider_wr 
+    
+    .overlay
+      width: 519px
+      height: 519px
+      left: -8px
+
+  .slider_nav 
+    right: 55px
+    top: 31%
+    
+    .next_bag
+      width: 80px
+      height: 80px
+
+      img
+        width: 45px
+        height: 45px
+
+    .bottom_slider_nav 
+      
+      .counter
+        left: -60px
+
+      .bag_nav 
+        right: -31px
+        top: 42px
+        
+        .arrow
+          width: 30px
+          height: 30px
+
+          &.next_arrow
+            margin-top: 15px
+
+          svg
+            width: 20px
+
+  .search_bl 
+    
+    input
+      right: 20px
+      left: initial
+      top: 0
+      transform: translate(0, 0)
+
+    &:hover, &:focus, &:active
+
+      input
+        width: 130px
+
+  .product_item
+    padding-bottom: 5px
+
+    .product_descr 
+      
+      .product_price
+        margin-top: 0
+    
+    .product_nav
+      width: 70px
+      margin: 10px 10px 0 0
+
+  .advantages_cnt 
+
+    .adv_label
+      font-size: 24px
+      margin-bottom: 30px
+    
+    .adv_item 
+      
+      p
+        font-size: 14px
+
+  .form_sender 
+    
+    input
+      max-width: 60%
+      padding: 10px 20px
+
+    button
+      max-width: 115px
+      padding: 0
+
+  .main_footer
+    font-size: 12px
+
+    .phone_wr
+      margin: auto
+
+    .addr
+      white-space: initial
+      margin: 10px 0 15px
+    
+    .foot_nav 
+      
+      a
+        white-space: initial
+        font-size: 12px
+
+  .logo_footer
+    max-width: 124px
+    margin: auto
+
+  .wsf
+    margin-top: 3px
+
 // ≥768px
 +media-breakpoint-down(sm)
 
+  // main page
+
+  .mm-menu 
+    width: 100%
+    max-width: 100%
+
+  .mm-panel:after, .mm-panel:before
+    height: 0
+
+
+  .mm-wrapper_opening .mm-menu_offcanvas.mm-menu_opened~.mm-slideout	
+    transform: translate(100%,0)
+    transform: translate3d(100%,0,0)
+
+  .s_main_screen
+    top: -212px
+
+  .logo 
+    margin: 0
+    
+    img
+      max-width: 85px
+      margin: auto
+
+  .shop_buttons
+    max-width: 65px
+
+  .search_bl 
+    width: 100%
+    
+    input
+      left: 13%
+      right: initial
+
+    &:active, &:focus, &:hover
+      
+      input
+        width: 90%
+
+  .main_title
+    max-width: 217px
+    margin-top: 35px
+
+    h1
+      font-size: 18px
+
+    .main_desc
+      font-size: 14px
+      margin: 15px 0 35px
+
+    .button_up
+      font-size: 14px
+      max-width: 160px
+      padding: 15px 0
+
+  .bag_slider
+    max-width: 220px
+    margin-left: -11px
+
+  .slider_wr
+    left: 80%
+    top: -40%
+
+    .overlay
+      width: 400px
+      height: 400px
+      left: -29px
+
+  .slider_nav
+    right: 39px
+
+  .s_main_screen
+    height: 0
+    min-height: 771px
+
+  .close_inside
+    left: 5%
+    top: 5%
+    transform: initial
+
+  .mm-listview 
+    top: 56%
+    
+    li 
+      margin-bottom: 10px
+      
+      a
+        font-size: 18px
+
+    .location
+      margin-top: 60px
+
+    .soc_media
+      margin: 20px auto
+
+    .phone_wr
+      margin-top: 30px
+      max-width: 210px
+      font-size: 16px
+
+  .partners_slider
+    width: 90%
+    margin: auto 
+
+  .partners_wr
+    margin-top: -195px
+
+  .preview_title
+
+    h2
+      font-size: 18px
+      margin: auto
+      max-width: 220px
+      text-align: center
+
+    .prev_desc
+      max-width: 90%
+      font-size: 14px
+      margin: 20px auto 40px
+      text-align: center
+
+  .prewiews_wr
+    padding: 30px 0
+
+  .advantages_cnt 
+
+    .adv_label
+      margin-bottom: 20px
+    
+    .adv_item
+      flex-direction: column
+      text-align: center  
+
+      p
+        margin: 15px 0 0 0
+
+  .s_sender
+    padding: 30px 0 45px
+
+  .form_sender
+    margin-top: 20px
+
+    button
+      max-width: 130px
+
+    input
+      max-width: 80%
+      margin-right: 5%
+
+  .foot_col_1, .foot_col_2, .foot_col_3, .foot_col_4, .foot_nav
+    margin: auto
+    max-width: 192px
+
+  .logo_footer 
+    width: 100%
+    margin: auto
+    
+    img
+      max-width: 124px
+
+  .main_footer
+    padding: 30px 0
+
+  .foot_col_4
+    margin-top: 25px
+
+  .wsf
+    margin-top: 10px
+
+
+
 // ≥576px
 +media-breakpoint-down(xs)
+
+  // Main page
+
+  .s_main_screen
+    min-height: 840px
+    padding-top: 226px
+
+  .bag_slider
+    max-width: 190px
+    margin: auto
+    padding-top: 0
+
+  .slider_wr 
+    left: 50%
+    transform: translateX(-50%)
+    top: 10%
+    
+    .overlay
+      width: 360px
+      height: 360px
+      left: 90px
+
+  .slider_nav 
+    width: 100%
+    right: 0
+
+    .bottom_slider_nav 
+      
+      .counter
+        left: 63%
+        font-size: 14px
+        width: 170px
+        top: 100px 
+
+      .current
+        font-size: 24px
+
+        &::after
+          width: 95px
+          left: 44px
+          top: 18px
+      
+      .bag_nav
+        top: 73px
+        right: 0
+
+
+    .next_bag
+      margin: auto
+      top: 230px
+    
+    .slider_nav_wr
+      position: initial
+
+  .product_item 
+    padding-bottom: 15px
+    
+    .product_img 
+      
+      img
+        max-width: 90%
+
+    .product_descr 
+      
+      .product_name
+        font-size: 10px
+
+      .product_price
+        font-size: 14px
+
+        #price
+          font-size: 14px
+          margin-right: 12px
+
+    .product_nav
+      width: 60px
+
+  .product_item .product_nav .cart, .product_item .product_nav .wishlist
+    width: 25px
+    height: 25px
+    font-size: 15px
+
+    svg
+      width: 15px
+
+  .prewiews_wr
+    padding: 30px 0 20px
+
+  .adv_nav .nav_numb:not(:last-child)::after
+    width: 65px
+
+  .mm-listview 
+    top: 60%
+    
+    li
+      margin-bottom: 0
+
+  .mm-panels>.mm-panel>.mm-listview
+    margin: 20px 0
+
+  .mm-listview .location
+    margin-top: 45px
+
+  .mm-listview .soc_media
+    margin: 20px auto 30px
+
+  .search_bl 
+    
+    input
+      left: 28%
+
+  // .mm-panels>.mm-panel>.mm-listview
+  //   margin: -20px 0
+
 
 
 /*==========  Mobile First  ==========*/

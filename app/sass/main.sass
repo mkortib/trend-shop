@@ -12,7 +12,7 @@
 
 @mixin HelvReg()
 	font-family: 'Helvetica Neue Cyr Light', sans-serif
-	font-weight: normal
+	font-weight: 400
 
 @mixin HelvBold()
 	font-family: 'Helvetica Neue Cyr Bold', sans-serif
@@ -55,6 +55,19 @@ body, html
 	@include HelvReg()
 	font-size: 16px
 	color: $black
+
+body::-webkit-scrollbar 
+	width: 5px
+
+ 
+body::-webkit-scrollbar-track 
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+
+ 
+body::-webkit-scrollbar-thumb 
+	background-color: $accent
+	outline: 1px solid $accent
+
 
 
 
@@ -118,62 +131,65 @@ body, html
 	position: relative
 	padding: 16px 0 15px
 
-	&::after
-		content: ''
-		position: absolute
-		width: 10000%
-		top: 0
-		left: 50%
-		transform: translateX(-50%)
-		background-color: rgba(217, 213, 213, 0.25)
-		height: 1px
-
-	.mnu_nav
-		@include HelvBold()
-		display: flex
-		max-width: 84px
-		width: 100%
-		cursor: pointer
-		font-size: 14px
-		
-
-	.mnu_butt
+	&.bottom_header_line
 		position: relative
-		top: 5px
-		margin-right: 15px
 
-		span
-			background-color: $black
-			border-radius: 5px
-			width: 20px
-			height: 2px
-			display: block
+		&::after
+			content: ''
+			position: absolute
+			width: 10000%
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+			background-color: rgba(217, 213, 213, 0.25)
+			height: 1px
 
-			&:first-child
-				margin-bottom: 5px
-				width: 30px
+.mnu_nav
+	@include HelvBold()
+	display: flex
+	max-width: 84px
+	width: 100%
+	cursor: pointer
+	font-size: 14px
+	
 
-	.phone_wr
-		width: 100%
+.mnu_butt
+	position: relative
+	top: 5px
+	margin-right: 15px
+
+	span
+		background-color: $black
+		border-radius: 5px
+		width: 20px
+		height: 2px
+		display: block
+
+		&:first-child
+			margin-bottom: 5px
+			width: 30px
+
+.phone_wr
+	width: 100%
+	text-align: center
+
+	.phone
+		text-decoration: none
+		@include HelvMed()
+		display: block
 		text-align: center
+		color: $black
+		border-radius: 50px
+		padding: 12px 0
+		width: 100%
+		border: 1px solid $accent
 
-		.phone
-			text-decoration: none
-			@include HelvMed()
-			display: block
-			text-align: center
-			color: $black
-			border-radius: 50px
-			padding: 12px 0
-			width: 100%
-			border: 1px solid $accent
-
-		a:nth-child(2)
-			text-decoration: none
-			color: $accent
-			font-size: 14px
-			margin-top: 15px
-			display: block
+	a:nth-child(2)
+		text-decoration: none
+		color: $accent
+		font-size: 14px
+		margin-top: 15px
+		display: block
 
 .logo
 	max-width: 188px
@@ -252,10 +268,8 @@ body, html
 .mm-panel:after, .mm-panel:before
 	height: 0
 
-.bottom_header::after
-	background-color: transparent
 
-@media all and (min-width: 550px) 
+@media all and (min-width: 768px) 
 
 	.mm-wrapper_opening .mm-menu_offcanvas.mm-menu_opened~.mm-slideout	
 		transform: translate(640px,0)
@@ -504,9 +518,13 @@ section
 				display: flex
 				align-items: center
 				justify-content: center
+				box-shadow: 0px 4px 25px rgba(255, 205, 194, 0.25)
+				transition: transform .3s ease
 
 				&.next_arrow
 					margin-top: 25px
+
+
 
 
 
@@ -522,6 +540,11 @@ section
 	margin-top: -180px
 	position: relative
 	padding-bottom: 40px
+
+	.partner
+
+		img
+			margin: auto
 	
 	&::after
 		content: ''
@@ -653,7 +676,191 @@ section
 			line-height: 1.4
 
 
+.s_sender
+	padding: 100px 0 
 
+.sender_title
+	font-size: 36px
+	@include HelvMed()
+	line-height: 1.3
+
+	span
+		color: $accent
+
+
+.sender_descr
+	
+	p
+		font-size: 18px
+
+
+.form_sender
+	width: 100%
+	display: flex
+	justify-content: space-between
+
+	input
+		max-width: 437px
+		width: 100%
+		padding: 25px 30px
+		font-size: 16px
+		color: $dark-grey
+		outline: none
+		border: 1px solid $black
+
+		&::placeholder
+			color: $dark-grey
+
+	button
+		max-width: 210px
+		width: 100%
+		margin: 0
+		font-size: 14px
+		@include HelvBold()
+		color: #ffffff
+		background-color: $black
+
+
+	// footer
+
+.main_footer
+	padding: 65px 0
+	border-top: 1px solid #D9D5D5
+
+.logo_footer
+	max-width: 144px
+	display: block
+
+.copy
+	font-size: 14px
+	text-align: center
+	margin-top: 20px
+
+.wsf
+	margin-top: 20px
+	display: block
+	text-align: center
+	color: $black
+	transition: color .3s ease
+
+	&:hover
+		text-decoration: none
+		color: $accent
+
+		path
+			fill: $accent
+
+	svg
+		position: relative
+		top: 5px
+		left: 8px
+
+		path
+			transition: fill .3s ease
+
+.foot_nav
+
+	ul, li
+		list-style-type: none
+		padding: 0
+		margin: 0
+
+	li:not(:last-child)
+		margin-bottom: 20px
+
+	ul
+		text-align: center
+
+	a
+		display: block
+		color: $black
+		font-size: 15.5px
+		transition: color .3s ease
+
+		&:hover
+			text-decoration: none
+			color: $accent
+
+.work_days
+	max-width: 140px
+	text-align: center
+	margin: auto
+	line-height: 1.9
+
+.addr
+	margin: 20px 0
+
+.foot_col_4
+	text-align: center
+
+	.soc_media
+		margin: 0 auto 20px
+		
+	span
+		display: block
+		margin-bottom: 25px
+
+	.button
+		background-color: $black
+		margin: 0
+
+		&:hover
+			text-decoration: none
+
+ .slick-slide:focus
+	 outline: none!important
+	
+.partner_nav
+	// z-index: -1
+	width: 95%
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	display: flex
+	justify-content: space-between
+
+	> div
+		padding: 5px
+
+	svg
+		width: 20px
+		height: 20px
+
+.adv_nav
+	display: flex
+	margin: auto
+	width: 90%
+	justify-content: space-between
+	margin-top: 20px
+
+	.nav_numb
+		font-size: 18px
+		color: $accent
+		@include HelvBold()
+		position: relative
+		display: flex
+		align-items: center
+
+		&.active
+			font-size: 24px
+
+		&:not(:last-child)
+			width: 50%
+			justify-content: flex-start
+
+			&::after
+				content: ''
+				position: absolute
+				width: 75px
+				height: 2px
+				background: $black
+				left: 55%
+				top: 50%
+				transform: translate(-50%, -50%)
+
+.mm-menu_theme-dark .mm-listitem_selected>a:not(.mm-btn_next), .mm-menu_theme-dark .mm-listitem_selected>span
+	background: none	
 
 
 
